@@ -1,0 +1,50 @@
+/* ========================================================================= */
+/* Units, prices, etc. */
+
+/* Generic units */
+.unit {
+
+	.prefix {
+		vertical-align: top;
+	}
+
+	.minor {
+		font-size: 1.4em;
+	}
+
+	.decimal {
+		vertical-align: top;
+	}
+
+	.major {
+		vertical-align: top;
+	}
+
+	.suffix {
+		vertical-align: top;
+	}
+}
+
+/* Prices */
+.price {
+
+	.currency {
+		vertical-align: top;
+	}
+
+	.dollars {
+		font-size: 1.4em;
+	}
+
+	.decimal {
+		vertical-align: top;
+	}
+
+	.cents {
+		vertical-align: top;
+	}
+
+	.per {
+		vertical-align: top;
+	}
+}

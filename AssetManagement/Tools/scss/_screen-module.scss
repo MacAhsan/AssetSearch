@@ -1,0 +1,20 @@
+/* ========================================================================= */
+/* Modules */
+
+/* Base modules */
+@include clearfix('.module-group');
+.module-group {
+}
+
+.module {
+	position: relative;
+	header, .header {
+		position: relative;
+	}
+	.content {
+		position: relative;
+	}
+	footer, .footer {
+		position: relative;
+	}
+}

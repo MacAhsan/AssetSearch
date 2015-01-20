@@ -1,0 +1,127 @@
+/* ========================================================================= */
+/* Base styles */
+
+body {
+	margin: 0;
+	font: 62.5%/1.5 "Helvetica Neue",Arial,sans-serif;
+	color: #333;
+	background: #fff;
+}
+
+section, article, header, nav, aside, footer, video, dialog, figure, address {
+  display: block;
+}
+
+img {
+	border: none;
+}
+
+input, select, textarea, button {
+	font-family: inherit;
+	font-size: 1em;
+	color: #333;
+}
+
+a {
+	&:link {
+		color: $link_colour;
+	}
+	&:visited {
+		color: $link_visited_colour;
+	}
+	&:hover, &:active {
+		color: $link_hover_colour;
+	}
+}
+
+::-moz-selection {
+	background: #333;
+	color: #fff;
+}
+
+::selection {
+	background: #333;
+	color: #fff;
+}
+
+/* Reset - still not sure this is a good idea */
+h1, h2, h3, h4, h5, h6, p, ul, ol {
+  margin: 0 0 10px;
+  padding: 0;
+  border: 0;
+  font-weight: normal;
+	small {
+		font-size: 0.75em;
+		color: #999;
+	}
+	a {
+		text-decoration: none;
+	}
+}
+h1 {
+	font-size: 2em;
+}
+h2 {
+	font-size: 1.8em;
+}
+h3 {
+	font-size: 1.6em;
+}
+h4 {
+	font-size: 1.4em;
+}
+h5 {
+	font-size: 1.2em;
+	font-weight: bold;
+	small {
+		font-size: 0.85714em;
+		color: #999;
+	}
+}
+h6 {
+	font-size: 1em;
+	font-weight: bold;
+	small {
+		font-size: 1em;
+		color: #999;
+	}
+}
+
+ul, ol {
+	list-style-type: none;
+	padding: 0 0 0 1.3em;
+}
+
+ul {
+	list-style-type: disc;
+	ul {
+		list-style-type: circle;
+		ul {
+			list-style-type: square;
+		}
+	}
+}
+
+ol {
+	list-style-type: decimal;
+	ol {
+		list-style-type: upper-roman;
+		ol {
+			list-style-type: lower-roman;
+		}
+	}
+}
+
+dl {
+}
+dt {
+	font-weight: bold;
+}
+dd {
+	margin-left: 2em;
+}
+
+.intro {
+	font-size: 1.16667em;
+}
+

@@ -1,0 +1,41 @@
+/* ========================================================================= */
+/* Mixins */
+
+@mixin clearfix($selector: '.clearfix') {
+	#{$selector} {
+		zoom: 1;
+		&:before,
+		&:after {
+			display: block;
+			visibility: hidden;
+			width: 0;
+			height: 0;
+			overflow: hidden;
+			font-size: 0;
+			line-height: 0;
+			content: ".";
+		}
+		&:after {
+			clear: both;
+		}
+	}
+}
+
+@mixin gradient-bg($header_start_colour: #ccc, $header_end_colour: #666) {
+	background: $header_start_colour;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $header_start_colour), color-stop(100%, $header_end_colour));
+	background: -webkit-linear-gradient(top, $header_start_colour 0%, $header_end_colour 100%);
+	background: -moz-linear-gradient(top, $header_start_colour 0%, $header_end_colour 100%);
+	background: -ms-linear-gradient(top, $header_start_colour 0%, $header_end_colour 100%);
+	background: -o-linear-gradient(top, $header_start_colour 0%, $header_end_colour 100%);
+	background: linear-gradient(top, $header_start_colour 0%, $header_end_colour 100%);
+	/* IE8< filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$header_start_colour', endColorstr='$header_end_colour', GradientType=0); */
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='$header_start_colour', endColorstr='$header_end_colour', GradientType=0)";
+}
+
+@mixin transition($properties: all, $duration: 1s, $timing_function: ease, $delay: 0s) {
+	-webkit-transition: $properties $duration $timing_function $delay;
+	-moz-transition: $properties $duration $timing_function $delay;
+	-o-transition: $properties $duration $timing_function $delay;
+	transition: $properties $duration $timing_function $delay;
+}

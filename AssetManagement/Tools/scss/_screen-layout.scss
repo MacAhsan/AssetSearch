@@ -1,0 +1,139 @@
+/* ========================================================================= */
+/* Basic page layout */
+
+#page-wrapper {
+	position: relative;
+}
+
+#header-wrapper > header, #main, #header-wrapper > footer {
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+nav ul, nav li {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	letter-spacing: -4px;
+}
+
+nav li {
+	letter-spacing: normal;
+}
+
+
+
+/* Skip navigation links */
+#skipnav {
+	position: absolute;
+	z-index: 32768;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+#skipnav a {
+	position: absolute;
+	left: -1000px;
+	width: 300px;
+	height: 20px;
+	margin: 0 auto;
+	padding: 7px 10px;
+	-webkit-border-radius: 0 0 7px 7px;
+	-moz-border-radius: 0 0 7px 7px;
+	border-radius: 0 0 7px 7px;
+	overflow: hidden;
+	background: #fff;
+	font-size: 1.4em;
+	text-align: center;
+}
+
+#skipnav a:focus {
+	left: 0;
+	outline: none;
+}
+
+/* Header */
+#header-wrapper {
+	@include gradient-bg($header_start_colour, $header_end_colour);
+	margin-bottom: 10px;
+	box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+}
+
+#header-wrapper > header {
+	font-size: 1.4em;
+}
+
+#header-wrapper > header #logo, #header-wrapper > header nav {
+	display: inline-block;
+}
+
+#header-wrapper > header #logo {
+	margin: 10px 10px 10px 0;
+	font-weight: bold;
+}
+
+#header-wrapper > header #logo img {
+	vertical-align: middle;
+}
+
+#header-wrapper > header a:link, #header-wrapper > header a:visited {
+	color: $header_link_colour;
+	text-decoration: none;
+}
+
+#primary-navigation {
+	margin-left: 10px;
+	border-right: 1px solid rgba(255,255,255,0.4);
+	border-left: 1px solid rgba(0,0,0,0.4);
+	vertical-align: top;
+}
+
+#primary-navigation a {
+	display: block;
+	height: 32px;
+	padding: 10px 20px;
+	border-left: 1px solid rgba(255,255,255,0.2);
+	border-right: 1px solid rgba(0,0,0,0.2);
+	@include transition(background-color);
+}
+
+#primary-navigation a:hover {
+	background: rgba(255,255,255,0.3);
+	background: rgba(255,255,255,0.2);
+	@include transition(background-color, 0.2s);
+}
+
+
+/* Main content area */
+#main {
+	font-size: 1.2em;
+}
+
+/* Secondary navigation */
+#secondary-navigation ul, #secondary-navigation li {
+	display: block;
+}
+
+/* Sidebar */
+
+/* Footer */
+#footer-wrapper > footer {
+	margin-top: 10px;
+	padding: 10px;
+	border-top: 1px solid #e3e3e3;
+}
+
+#footer-wrapper > footer ul {
+	letter-spacing: normal;
+}
+
+#footer-wrapper > footer li:after {
+	content: " |";
+}
+#footer-wrapper > footer li:last-child:after {
+	content: "";
+}
+

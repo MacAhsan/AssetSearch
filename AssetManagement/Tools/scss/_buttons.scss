@@ -1,0 +1,201 @@
+
+/* TODO: replace with mixin */
+@font-face {
+    font-family: 'WebSymbolsRegular';
+    src: url('fonts/websymbols-regular-webfont.eot');
+    src: url('fonts/websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/websymbols-regular-webfont.woff') format('woff'),
+         url('fonts/websymbols-regular-webfont.ttf') format('truetype'),
+         url('fonts/websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.button, .button:link, .button:visited {
+
+	display: inline-block;
+
+	padding: 0.3em 1em;
+	margin: 0;
+
+	border: 1px solid #ccc;
+	border-radius: 7px;
+
+	@include gradient-bg(#e5e5e5, #ccc);
+
+	color: #333;
+	font-size: inherit;
+	font-weight: bold;
+	line-height: inherit;
+	text-decoration: none;
+	text-shadow: -1px -1px 1px #ccc;
+
+	cursor: pointer;
+
+
+	&:focus {
+		outline: none;
+		box-shadow: 0 0 7px 2px #ABDDEE;
+	}
+
+	&:hover {
+		box-shadow: 0 0 7px 2px #ABDDEE;
+	}
+
+	&:active {
+		@include gradient-bg(#ccc, #e5e5e5);
+	}
+
+
+	&[disabled] {
+		opacity: 0.666;
+	}
+
+	&[disabled]:hover {
+		box-shadow: none;
+	}
+
+	&[disabled]:active {
+		@include gradient-bg(#e5e5e5, #ccc);
+	}
+
+
+	&.primary,
+	&.primary[disabled]:active {
+		border-color: #DB5626;
+		background: #E79070;
+		@include gradient-bg(#E79070, #DB5626);
+		color: #fff;
+		text-shadow: -1px -1px 1px #DB5626;
+	}
+
+	&.primary:active {
+		@include gradient-bg(#DB5626, #E79070);
+	}
+
+
+	&.secondary,
+	&.secondary[disabled]:active {
+		border-color: #069;
+		background: #09c;
+		@include gradient-bg(#09c, #069);
+		color: #fff;
+		text-shadow: -1px -1px 1px #069;
+	}
+
+	&.secondary:active {
+		@include gradient-bg(#069, #09c);
+	}
+
+
+	&.tertiary,
+	&.tertiary[disabled]:active {
+		border-color: #09c;
+		background: #7FCCE5;
+		@include gradient-bg(#7FCCE5, #09c);
+		color: #fff;
+		text-shadow: -1px -1px 1px #09c;
+	}
+
+	&.tertiary:active {
+		@include gradient-bg(#09c, #7FCCE5);
+	}
+
+	@include transition(box-shadow, 0.25s);
+
+/*
+	&.menu {
+		border-radius: 7px 0 0 7px;
+		padding-right: 7px;
+		border-right: 1px solid blue;
+	}
+
+	&.menu:after {
+		display: inline-block;
+		position: relative;
+		top: 0;
+		left: 10px;
+		font-family: 'WebSymbolsRegular';
+	}
+*/
+	&.icon {
+		padding-right: 7px;
+	}
+
+	&.icon:before, &.icon:after {
+		position: relative;
+		top: -1px;
+		font-family: 'WebSymbolsRegular';
+		font-size: 12px;
+	}
+
+	&.icon-arrow-right {
+		padding-right: 14px;
+	}
+	&.icon-arrow-right:after {
+		left: 7px;
+		font-size: 10px;
+		content: ">";
+	}
+
+	&.icon-arrow-left {
+		padding-left: 14px;
+	}
+	&.icon-arrow-left:before {
+		left: -7px;
+		font-size: 10px;
+		content: "<";
+	}
+
+	&.icon-question {
+		padding-right: 14px;
+	}
+	&.icon-question:after {
+		top: 0;
+		left: 7px;
+		font-family: inherit;
+		content: "?";
+	}
+
+	&.icon-search {
+		padding-right: 14px;
+	}
+	&.icon-search:after {
+		left: 7px;
+		content: "L";
+	}
+
+	&.icon-twitter {
+		padding-right: 14px;
+	}
+	&.icon-twitter:after {
+		left: 7px;
+		content: "t";
+	}
+
+	&.icon-mail {
+		padding-right: 14px;
+	}
+	&.icon-mail:after {
+		left: 7px;
+		content: "@";
+	}
+
+	&.icon-cloud {
+		padding-right: 14px;
+	}
+	&.icon-cloud:after {
+		left: 7px;
+		content: "C";
+	}
+
+}
+
+
+
+
+
+.ui-button-menu {
+	display: none;
+}
