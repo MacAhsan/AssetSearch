@@ -1,0 +1,6 @@
+Most of the time field inspectors/technicians record data in excel spreadsheets offline and create reports, and when  client asks about the history of the tool inspected or when managers  want to evaluate and track the tool's hours. They need to dig in to hundred or thousands of reports to find about  tool or its component history.
+Aware of the importance of Asset Tool Management, I have has launched the concept of “Asset-Search”. This works as simple as Search Engines like Google, Bing or Yahoo. The principle of this platform is to solve problems for users to search the asset’s run time, location, tools, job number, assignment, comments and their reports.
+
+Each time a user uploads a spreadsheet report, the software extracts the information out of it and stores it in its database engine, keeping the history each time. It also tracks the GPS location, expiration of assets and its Smart intelligence system keeps processing the comments and decides the health of the asset accordingly.
+
+Asset-Search can work with many industries. The platform is an amazing problem solver for Oil field inspectors who inspect motors, rigs and pipes. It’s also useful for rental tools like cranes, lifters etc. and the automotive industry would benefit greatly from it for repairs and parts centers.
