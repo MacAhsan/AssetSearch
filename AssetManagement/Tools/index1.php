@@ -90,7 +90,7 @@
 						</ul>
 					</nav>
 
-					<p role="contentinfo">&copy;  DRILCO APPS 2014 </p>
+					<p role="contentinfo">&copy; MuhammadAhsan APPS 2014 </p>
 
 				</footer>
 			</div>
